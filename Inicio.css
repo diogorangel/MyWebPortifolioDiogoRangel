@@ -1,0 +1,113 @@
+header {
+	background: #BBBBBB;
+	padding: 10px 0;
+
+}
+.caixa{
+	position: center;
+	width: 940px;
+	margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li{
+	display: inline;
+	margin:	0 0 0 15px;
+}
+
+nav a{
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+.Presentation {
+	width: 940px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.Presentation li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border:2px solid #000000;
+	border-radius: 10px;
+    list-style: none; /* Remove os marcadores */
+}
+
+.Presentation li:hover{
+	border-color:#1990c7;
+	font-size: 14px;
+}
+
+.Presentation li:active{
+	border-color:#088C19;
+}
+
+.Presentation li:hover h2 {
+	font-size: 34px;
+}
+.Presentation h2{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.Presentation li img {
+    display: inline-block; /* Define a imagem como inline-block */
+    max-width: 100%; /* Garante que a imagem respeite o contêiner */
+    height: auto; /* Mantém a proporção */
+    transition: none; /* Remove qualquer animação ou alteração ao passar o mouse */
+}
+
+.professional {
+	font-size:18px;
+}
+
+
+.AcademicHistoric{
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.footer {
+	text-align: center;
+	color: aliceblue;
+	background: url("speaking.jpg");
+	padding: 40px 0px;
+}
+
+.copyright{
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0px 0px;
+}
