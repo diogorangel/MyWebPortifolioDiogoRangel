@@ -149,28 +149,34 @@
                 <div class="wt-footer-2-social wt-footer-right-social d-none d-sm-block">
                     <ul>
                         <li>
-							<a href="https://www.linkedin.com/in/diogorangels/">
+							<a href="https://www.linkedin.com/in/diogorangels/" target="_blank">
                                 <span class="active-media">Linkedin</span>
                                 <span class="hover-media"><i class="fa-brands fa-linkedin-in"></i></span>
                             </a>
                         </li>
 						<li>
-							<a href="https://github.com/diogorangel">
+							<a href="https://github.com/diogorangel" target="_blank">
 								<span class="active-media">GitHub</span>
 								<span class="hover-media"> <i class="fa-brands fa-github"></i></span>
 							</a>
                         </li>
                         <li>
-							<a href="https://www.facebook.com/diogorangels">
+							<a href="https://www.facebook.com/diogorangels" target="_blank">
 								<span class="active-media">Facebook</span>
 								<span class="hover-media"><i class="fa-brands fa-facebook-f"></i></span>
 							</a>
                         </li>
                         <li>
-                          <a href="https://instagram.com/_diogorangel">
+                          <a href="https://instagram.com/_diogorangel" target="_blank">
                             <span class="active-media">Instagram</span>
                             <span class="hover-media"><i class="fa-brands fa-instagram"></i></span>
                           </a>
+                        </li>
+                        <li>
+                            <a href="https://soundcloud.com/diogorangel" target="_blank">
+                              <span class="active-media">Soundcloud</span>
+                              <span class="hover-media"><i class="fa-brands fa-soundcloud"></i></span>
+                            </a>
                         </li>
                       </ul>
                 </div>
@@ -216,7 +222,7 @@
                                                         <div class="homemenu-thumb mb-15">
                                                             <img src="assets/img/menu/home1.jpg" alt="">
                                                             <div class="homemenu-btn">
-                                                                <a class="menu-btn show-1" href="index.html">Home Page</a>
+                                                                <a class="menu-btn show-1" href="index.html" id="#index">Home Page</a>
                                                             </div>
                                                         </div>
                                                         <div class="homemenu-content text-center">
@@ -233,9 +239,9 @@
                                                 <li><a href="portfolio.html">Projects</a></li>
                                             </ul>
                                         </li>
-                                        <li class="has-dropdown"><a href="https://encurtador.com.br/GcOiF" target="_blank">Blog</a>
+                                        <li class="has-dropdown"><a href="https://www.linkedin.com/newsletters/technology-on-my-vision-7267611643126132736/" target="_blank">Blog</a>
                                             <ul class="submenu dark wt-submenu">
-                                                <li><a href="https://encurtador.com.br/GcOiF" target="_blank">Blog</a></li>
+                                                <li><a href="https://www.linkedin.com/newsletters/technology-on-my-vision-7267611643126132736/" target="_blank">Blog</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="contact.html">Contact</a></li>
@@ -253,20 +259,36 @@
                                 <ul>
                                     <li>
                                         <input class="wt-header-check-btn" type="checkbox">
-                                        <a href="#"><i class="fa-sharp fa-regular fa-share-nodes"></i> Social</a>
-                                        <ul class="submenu">
+                                        <a href="#submenu" onclick="scrollToSubmenu()"> <i class="fa-sharp fa-regular fa-share-nodes"></i>Social</a>
+                                        <ul id ="submenu" class="submenu">
                                             <li><a href="https://www.linkedin.com/in/diogorangels/" target="_blank">LinkedIn</a></li>
                                             <li><a href="https://github.com/diogorangel" target="_blank">GitHub</a></li>
                                             <li><a href="https://www.facebook.com/diogorangels" target="_blank">Facebook</a></li>
                                             <li><a href="https://instagram.com/_diogorangel" target="_blank">Instagram</a></li>
+                                            <li><a href="https://soundcloud.com/diogorangel" target="_blank">Soundcloud</a></li>
                                         </ul>
+                                        <script>
+                                            function scrollToSubmenu() {
+                                                const submenu = document.querySelector('.submenu');
+                                                submenu.scrollIntoView({ behavior: 'smooth' }); // Scrolla suavemente até o submenu
+                                            }
+                                        </script>
                                     </li>
                                 </ul>
+                            </div>
+                            
+                             <!-- blog -->
+                            <div class="wt-header-buton icon_main d-none d-sm-block">
+                                <a class="wt-header-btn" href="https://www.linkedin.com/newsletters/technology-on-my-vision-7267611643126132736/" target="_blank">Blog</a>
+                                <span class="icon_box">
+                                    <i class="icon_first fa-regular fa-arrow-right"></i>
+                                    <i class="icon_second fa-regular fa-arrow-right"></i>
+                                </span>
                             </div>
 
                             <!-- button -->
                             <div class="wt-header-buton icon_main d-none d-sm-block">
-                                <a class="wt-header-btn" href="contact.html">Inquiries 
+                                <a class="wt-header-btn" href="https://www.linkedin.com/in/diogorangels/" target="_blank">Inquiries 
                                     <span class="icon_box">
                                         <i class="icon_first fa-regular fa-arrow-right"></i>
                                         <i class="icon_second fa-regular fa-arrow-right"></i>
@@ -308,7 +330,7 @@
                             <div class="col-xl-2">
                                 <div class="wt-hero-button">
                                     <div class="wt-hover-btn-wrapper text-center">
-                                        <a class="wt-btn-circle wt-hover-btn-item wt-hover-btn" href="contact.html">
+                                        <a class="wt-btn-circle wt-hover-btn-item wt-hover-btn" href="https://www.linkedin.com/in/diogorangels/" target="_blank">
                                            <span class="wt-btn-circle-icon">
                                             <i class="fa-regular fa-arrow-up-right"></i>
                                            </span>
@@ -320,8 +342,8 @@
                         </div>
                     </div>
                     <div class="wt-hero-shape">
-                        <img class="wt-hero-shape-2" src="assets/img/hero/hero-bg-shape2.jpeg" alt="">
-                        <img class="wt-hero-shape-3" src="assets/img/hero/hero-bg-shape3.jpeg" alt="">
+                        <img class="wt-hero-shape-2" src="assets/img/hero/hero-bg-shape2.jpeg" alt="button linkedin">
+                        <img class="wt-hero-shape-3" src="assets/img/hero/hero-bg-shape3.jpeg" alt="button linkedin">
                     </div>
                 </section>
                 <!-- Hero area end -->
@@ -460,7 +482,7 @@
                                     <h2 class="wt-section-title wt-text-invert">What are <br>
                                         points importants about me</h2>
                                     <div class="wt-section-descr">
-                                        <p class="wt-section-paragraph">I had studied in many locals ande develop
+                                        <p class="wt-section-paragraph">I had studied in many locals and develop
                                             my skills in many areas. I have a lot of experience in many areas.
                                         </p>
                                     </div>
@@ -475,7 +497,7 @@
                                     </div>
                                     <div class="wt-process-content">
                                         <h4 class="wt-process-title">Process of Quality of software</h4>
-                                        <p class="wt-process-paragraph">I already work with LG Mobile, 
+                                        <p class="wt-process-paragraph">I already had worked at LG Mobile, 
                                             Bradesco Bank and Brazil Bank.</p>
                                         <div class="wt-process-thumb">
                                             <img src="assets/img/process/process-thumb.jpg" alt="me">
@@ -626,9 +648,9 @@
                             <div class="col-xl-7 col-lg-7">
                                 <div class="wt-section-wrapper mb-70 wt_fade_anim" data-delay=".3">
                                     <h2 class="wt-section-title wt-text-invert">Why I could <br>
-                                        <span>Work</span> wtih you</h2>
+                                        <span>Work</span> with you</h2>
                                     <div class="wt-section-descr">
-                                        <p class="wt-section-paragraph mb-50">I'm technical, love adventures and challengies and I have an field of experiences</p>
+                                        <p class="wt-section-paragraph mb-50">I'm technical, love adventures and challengies and I have a field of experiences</p>
                                         <div class="wt-service-bottom-button text-center">
                                             <div class="wt-hover-btn-wrapper">
                                                 <a class="wt-btn-circle wt-hover-btn-item wt-hover-btn" href="contact.html">
