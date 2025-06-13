@@ -44,15 +44,15 @@ li,
   /**
   @color declaration
   */
-  --wt-common-white: #ffffff;
-  --wt-common-black: #141414;
-  --wt-common-black-secondary: #212125;
-  --wt-heading-primary: #141414;
-  --wt-grey-1: #DED7C4;
-  --wt-text-body: #cecece;
-  --wt-text-p: #cecece;
-  --wt-text-1: #5B5B5B;
-  --wt-text-2: #bfbfbf;
+  --wt-common-white: #ebebeb;
+  --wt-common-black: hsl(251, 88%, 68%);
+  --wt-common-black-secondary: #6565fd;
+  --wt-heading-primary: #d9dee4;
+  --wt-grey-1: #edebee;
+  --wt-text-body: #ffffff;
+  --wt-text-p: #ebe4e4;
+  --wt-text-1: #f0e7e7;
+  --wt-text-2: #eee7e7;
   --wt-theme-primary: #7C02FF;
   --wt-theme-primary-3: #FFF033;
   --wt-theme-primary-4: #F1FF9D;
