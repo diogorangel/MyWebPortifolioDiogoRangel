@@ -1,13 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="US">
- <!-- W07 Project BYU Jun 2025 WDD231 Web Frontend Development I -->
+ <!-- Website Portfólio - Diogo Rangel Dos Santos -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Diogo Rangel Dos Santos WebSite</title>
+    <title> Website Portfólio - Diogo Rangel Dos Santos</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="WDD 231 - Web Frontend Development I - Diogo Rangel Dos Santos">
+    <meta name="description" content="Website Portfólio - Diogo Rangel Dos Santos">
     <meta name="author" content="Diogo Rangel Dos Santos">
 
     <!-- Place favicon.ico in the root directory -->
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/flaticon_omio.css">
     <link rel="stylesheet" href="assets/css/spacing.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="scripts/js/lastmodified.js" defer></script>
 </head>
 
 <body class="wt-magic-cursor">
@@ -246,17 +247,41 @@
                                                 <li><a href="https://www.linkedin.com/newsletters/technology-on-my-vision-7267611643126132736/" target="_blank">Technology on my vision</a></li>
                                             </ul>
                                         </li>
-                                    <ul class="submenu dark wt-submenu"></ul>
+                                   <ul class="submenu dark wt-submenu"></ul>
                                         <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                    <ul class="submenu dark wt-submenu"></ul>
                                         <li><a href="weather.html">Weather</a></li>
+                                        <li><a href="News.html">News</a></li>
+                                        <li><a href="ExchangeRate.html">Exchange Rate</a></li>
                                     </ul>
                                 </nav>
                             </div>
-
+                            <!-- Projects -->
                             <div class="wt-header-buton icon_main d-none d-sm-block">
                                 <a class="wt-header-btn" href="portfolio.html">Projects</a>
+                                <span class="icon_box">
+                                    <i class="icon_first fa-regular fa-arrow-right"></i>
+                                    <i class="icon_second fa-regular fa-arrow-right"></i>
+                                </span>
+                            </div>
+                            <!-- Contact Page -->
+                             <div class="wt-header-buton icon_main d-none d-sm-block">
+                                <a class="wt-header-btn" href="contact.html">Contact</a>
+                                <span class="icon_box">
+                                    <i class="icon_first fa-regular fa-arrow-right"></i>
+                                    <i class="icon_second fa-regular fa-arrow-right"></i>
+                                </span>
+                            </div>
+                            <!-- Applications -->
+                            <div class="wt-header-buton icon_main d-none d-sm-block">
+                                <a class="wt-header-btn" href="ExchangeRate.html">Exchange Rate</a>
+                                <span class="icon_box">
+                                    <i class="icon_first fa-regular fa-arrow-right"></i>
+                                    <i class="icon_second fa-regular fa-arrow-right"></i>
+                                </span>
+                            </div>
+   
+                             <div class="wt-header-buton icon_main d-none d-sm-block">
+                                <a class="wt-header-btn" href="News.html">Last News</a>
                                 <span class="icon_box">
                                     <i class="icon_first fa-regular fa-arrow-right"></i>
                                     <i class="icon_second fa-regular fa-arrow-right"></i>
@@ -988,6 +1013,17 @@
                                             <a href="index.html"><img src="assets/img/logo/ds.jpeg" alt="Logo DS"></a>
                                         </div>
                                         <div class="wt-footer-content">
+                                            <p>Last Modification: <span id="last-modified"></span></p>
+                                            <p>Diogo Rangel Dos Santos</p>
+                                        </div>     
+                                    </div>
+                                </div>
+                                    <div class="wt-footer-info mt-55 wt_fade_anim" data-delay=".3">
+                                        <div class="wt-footer-logo mb-20">
+                                            <a href="https://www.youtube.com/@_diogorangel"><img src="https://img.shields.io/youtube/channel/subscribers/UCt1FtU-lbfQq65yJmpba7Uw" alt="Logo DS"></a>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1t_r5g67G1M?si=nEuHzdwIe8TQHIOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </div>
+                                        <div class="wt-footer-content">
                                             <p>Diogo Rangel Dos Santos</p>
                                         </div>     
                                     </div>
@@ -1049,7 +1085,9 @@
                                                         <li><a href="portfolio.html">Services</a></li>
                                                         <li><a href="https://www.linkedin.com/in/diogorangels/" target="_blank" >About</a></li>
                                                         <li><a href="contact.html">Contact</a></li>
-                                                         <li><a href="weather.html">Weather</a></li>
+                                                        <li><a href="weather.html">Weather</a></li>
+                                                        <li><a href="News.html">News</a></li>
+                                                        <li><a href="ExchangeRate.html">Exchange Rate</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -1075,6 +1113,7 @@
                             <div class="row justify-content-center">
                                 <div class="col">
                                     <div class="wt-footer-copyright text-center">
+                                         <p>Last Modification: <span id="last-modified"></span></p>
                                         <p class="wt-footer-copyright-pagaraph">Copyright © 2025 <a href="https://www.linkedin.com/in/diogorangels/">Diogo Rangel Dos Santos</a>. All Rights Reserved.</p>
                                     </div>
                                 </div>
@@ -1093,6 +1132,7 @@
 
 
     <!-- JS here -->
+    <script src="scripts/js/lastmodified.js" defer></script>
     <script src="assets/js/vendor/jquery.js"></script>
     <script src="assets/js/vendor/waypoints.js"></script>
     <script src="assets/js/bootstrap-bundle.js"></script>
