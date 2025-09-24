@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Gerador de Imagem - Diogo Rangel Dos Santos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Website Portfólio - Diogo Rangel Dos Santos">
+    <meta name="author" content="Diogo Rangel Dos Santos">
+    <script src="scripts/js/generate-images.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .dark-bg {
+            background-color: #0f0e0e;
+        }
+
+        .text-invert {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-md w-full px-6 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="#" class="font-bold text-2xl text-gray-800">Diogo Rangel Dos Santos</a>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-gray-600">
+                <a href="index.html" class="hover:text-blue-600 transition-colors">Home</a>
+                <a href="portfolio.html" class="hover:text-blue-600 transition-colors">Projects</a>
+                <a href="weather.html" class="hover:text-blue-600 transition-colors">Weather</a>
+                <a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a>
+                <a href="News.html" class="hover:text-blue-600 transition-colors">News</a>
+                <a href="ExchangeRate.html" class="hover:text-blue-600 transition-colors">Exchange Rate</a>
+                <a href="GenerateIAImages.html" class="hover:text-blue-600 transition-colors">Generate IA Imagens</a>
+            </nav>
+            <a href="https://www.linkedin.com/in/diogorangels/" class="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors" target="_blank">Inquiries</a>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-4">
+        <!-- Main Image Generator Section -->
+        <section class="wt-contact-innerpage-area pt-120 pb-120 dark-bg w-full max-w-2xl text-center rounded-2xl shadow-xl">
+            <div class="p-8">
+                <h2 class="text-3xl font-bold text-white mb-6">Gerador de Imagem</h2>
+                <p class="text-gray-300 mb-6">
+                    Enter your description and click "Generate Image" to create a custom image.
+                </p>
+
+                <div class="mb-4 w-full">
+                    <input type="text" id="imagePrompt" placeholder="Escreva o que você quer gerar..." class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <button id="generateBtn"
+                    class="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold shadow-md hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Gerar Imagem
+                </button>
+
+                <!-- Message Box for Alerts -->
+                <div id="messageBox" class="hidden mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-xl relative" role="alert">
+                    <span id="messageText" class="block sm:inline"></span>
+                </div>
+
+                <div id="loading" class="mt-8 hidden">
+                    <div class="flex items-center justify-center">
+                        <svg class="animate-spin -ml-1 mr-3 h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <span class="text-gray-300 font-medium">Gerando imagem...</span>
+                    </div>
+                </div>
+
+                <div id="imageContainer" class="mt-8 hidden">
+                    <img id="generatedImage" src="" alt="Imagem gerada" class="w-full h-auto rounded-xl shadow-md">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Interessado em trabalhar junto?</h2>
+            <div class="my-4 h-1 bg-gray-600 w-24 mx-auto rounded-full"></div>
+            <h6 class="text-gray-400">me mande um e-mail</h6>
+            <a href="mailto:diodam.rangel@gmail.com" class="text-blue-400 hover:underline">diodam.rangel@gmail.com</a>
+            
+            <div class="flex justify-center space-x-4 mt-6">
+                <a href="https://www.linkedin.com/in/diogorangels/" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors">LinkedIn</a>
+                <a href="https://github.com/diogorangel" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors">GitHub</a>
+                <a href="https://www.facebook.com/diogorangels" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors">Facebook</a>
+                <a href="https://instagram.com/_diogorangel" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors">Instagram</a>
+            </div>
+            <p class="mt-8 text-gray-500">Copyright © 2024 Diogo Rangel. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
