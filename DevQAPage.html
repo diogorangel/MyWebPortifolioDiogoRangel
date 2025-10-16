@@ -9,22 +9,24 @@
     <meta name="author" content="Diogo Rangel Dos Santos">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="scripts/DevQAPage.js" defer></script>
+    <script src="scripts/js/DevQAPage.js" defer></script> 
+    
     <style>
+        /* Importa a fonte Inter para consistência */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        /* Define a fonte Inter e transições para o tema */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        .dark-bg {
-            background-color: #0f0e0e;
+        /* Classe para o fundo da seção principal no modo escuro */
+        .card-bg-dark {
+            background-color: #0f0e0e; 
         }
 
-        .text-invert {
-            color: #fff;
-        }
-
+        /* Garante que o texto pré-formatado seja ajustado corretamente */
         pre {
             white-space: pre-wrap;
             word-wrap: break-word;
@@ -32,53 +34,61 @@
     </style>
 </head>
 
-<body class="bg-gray-100 flex flex-col min-h-screen">
-    <!-- Header -->
-    <header class="bg-white shadow-md w-full px-6 py-4">
+<body class="bg-gray-100 dark:bg-gray-900 flex flex-col min-h-screen">
+    <header class="bg-white dark:bg-gray-800 shadow-md w-full px-6 py-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <a href="#" class="font-bold text-2xl text-gray-800">Diogo Rangel Dos Santos</a>
+                <a href="#" class="font-bold text-2xl text-gray-800 dark:text-white">Diogo Rangel Dos Santos</a>
             </div>
-            <nav class="hidden md:flex space-x-6 text-gray-600">
-                <a href="index.html" class="hover:text-blue-600 transition-colors">Home</a>
-                <a href="portfolio.html" class="hover:text-blue-600 transition-colors">Projects</a>
-                <a href="weather.html" class="hover:text-blue-600 transition-colors">Weather</a>
-                <a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a>
-                <a href="News.html" class="hover:text-blue-600 transition-colors">News</a>
-                <a href="ExchangeRate.html" class="hover:text-blue-600 transition-colors">Exchange Rate</a>
-                <a href="GenerateIAImages.html" class="hover:text-blue-600 transition-colors">Generate IA Imagens</a>
-                <a href="DevQAPage.html" class="hover:text-blue-600 transition-colors font-semibold">Dev QA Page</a>
+            <nav class="hidden md:flex space-x-6 text-gray-600 dark:text-gray-300">
+                <a href="index.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+                <a href="portfolio.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
+                <a href="weather.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Weather</a>
+                <a href="contact.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+                <a href="News.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">News</a>
+                <a href="ExchangeRate.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Exchange Rate</a>
+                <a href="GenerateIAImages.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Generate IA Imagens</a>
+                <a href="DevQAPage.html" class="text-blue-600 font-bold dark:text-blue-400">Dev QA Page</a>
             </nav>
-            <a href="https://www.linkedin.com/in/diogorangels/" class="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors" target="_blank">Inquiries</a>
+            <div class="flex items-center space-x-4">
+                <button id="themeToggle" class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none">
+                    <svg id="themeIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </button>
+                <a href="https://www.linkedin.com/in/diogorangels/" class="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors" target="_blank">Inquiries</a>
+            </div>
         </div>
     </header>
 
     <main class="flex-grow flex items-center justify-center p-4">
-        <!-- Main Test Case Generator Section -->
-        <section class="wt-contact-innerpage-area py-12 dark-bg w-full max-w-4xl text-center rounded-2xl shadow-xl">
-            <div class="p-8">
-                <h2 class="text-3xl font-bold text-white mb-6">Gerador de Cenários de Teste</h2>
-                <p class="text-gray-300 mb-6">
+        <section class="card-bg-dark dark:bg-white w-full max-w-4xl text-center rounded-2xl shadow-xl p-8">
+            <div>
+                <h2 class="text-3xl font-bold text-white dark:text-gray-800 mb-6">Gerador de Cenários de Teste</h2>
+                <p class="text-gray-300 dark:text-gray-600 mb-6">
                     Descreva o cenário que você quer testar e a IA irá gerar os passos ou o código de teste.
                 </p>
 
                 <div class="mb-4 text-left">
-                    <label for="scenarioPrompt" class="block text-gray-300 mb-2">Descrição do Cenário:</label>
-                    <textarea id="scenarioPrompt" rows="4" placeholder="Ex: Crie um cenário de teste para o fluxo de compra de um produto em um e-commerce..." class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    <label for="scenarioPrompt" class="block text-gray-300 dark:text-gray-800 mb-2 font-medium">Descrição do Cenário:</label>
+                    <textarea id="scenarioPrompt" rows="4" placeholder="Ex: Crie um cenário de teste para o fluxo de compra de um produto em um e-commerce..." 
+                              class="w-full p-3 border border-gray-700 dark:border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900 dark:bg-white text-white dark:text-gray-800"></textarea>
                 </div>
 
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6 text-left">
                     <div class="w-full sm:w-1/2">
-                        <label for="testType" class="block text-gray-300 mb-2">Tipo de Teste:</label>
-                        <select id="testType" class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <option value="manual">Manual</option>
-                            <option value="automated">Automatizado</option>
+                        <label for="testType" class="block text-gray-300 dark:text-gray-800 mb-2 font-medium">Tipo de Teste:</label>
+                        <select id="testType" 
+                                class="w-full p-3 border border-gray-700 dark:border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900 dark:bg-white text-white dark:text-gray-800">
+                            <option value="manual">Manual (Passos)</option>
+                            <option value="automated">Automatizado (Código)</option>
                         </select>
                     </div>
 
                     <div class="w-full sm:w-1/2">
-                        <label for="language" class="block text-gray-300 mb-2">Linguagem / Formato:</label>
-                        <select id="language" class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <label for="language" class="block text-gray-300 dark:text-gray-800 mb-2 font-medium">Linguagem / Formato:</label>
+                        <select id="language" 
+                                class="w-full p-3 border border-gray-700 dark:border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900 dark:bg-white text-white dark:text-gray-800">
                             <option value="Texto Simples">Texto Simples</option>
                             <option value="Java com Selenium">Java com Selenium</option>
                             <option value="Python com Pytest">Python com Pytest</option>
@@ -94,8 +104,7 @@
                     Gerar Cenário de Teste
                 </button>
 
-                <!-- Message Box for Alerts -->
-                <div id="messageBox" class="hidden mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-xl relative" role="alert">
+                <div id="messageBox" class="hidden mt-4 px-4 py-3 rounded-xl relative" role="alert">
                     <span id="messageText" class="block sm:inline"></span>
                 </div>
 
@@ -105,20 +114,19 @@
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        <span class="text-gray-300 font-medium">Gerando cenário de teste...</span>
+                        <span class="text-gray-300 dark:text-gray-600 font-medium">Gerando cenário de teste...</span>
                     </div>
                 </div>
 
-                <div id="resultsContainer" class="mt-8 hidden text-left bg-gray-900 p-6 rounded-xl">
-                    <h3 class="text-xl font-bold text-white mb-4">Cenário Gerado:</h3>
-                    <pre id="testResult" class="text-gray-300"></pre>
+                <div id="resultsContainer" class="mt-8 hidden text-left bg-gray-900 dark:bg-gray-100 p-6 rounded-xl shadow-lg border border-gray-700 dark:border-gray-300">
+                    <h3 class="text-xl font-bold text-white dark:text-gray-800 mb-4">Cenário Gerado:</h3>
+                    <pre id="testResult" class="text-gray-300 dark:text-gray-700 overflow-x-auto"></pre>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gray-800 dark:bg-gray-950 text-white py-8">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-4">Interessado em trabalhar junto?</h2>
             <div class="my-4 h-1 bg-gray-600 w-24 mx-auto rounded-full"></div>

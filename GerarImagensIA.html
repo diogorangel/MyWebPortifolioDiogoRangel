@@ -10,54 +10,60 @@
     <script src="scripts/js/generate-images.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Importa a fonte Inter para consistência */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        /* Define a fonte Inter como padrão */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        .dark-bg {
-            background-color: #0f0e0e;
-        }
-
-        .text-invert {
-            color: #fff;
+        /* Classe para o fundo da seção principal no modo escuro */
+        .card-bg-dark {
+            background-color: #0f0e0e; /* Mantendo o seu background escuro original */
         }
     </style>
 </head>
 
-<body class="bg-gray-100 flex flex-col min-h-screen">
-    <!-- Header -->
-    <header class="bg-white shadow-md w-full px-6 py-4">
+<body class="bg-gray-100 dark:bg-gray-900 flex flex-col min-h-screen">
+    <header class="bg-white dark:bg-gray-800 shadow-md w-full px-6 py-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <a href="#" class="font-bold text-2xl text-gray-800">Diogo Rangel Dos Santos</a>
+                <a href="#" class="font-bold text-2xl text-gray-800 dark:text-white">Diogo Rangel Dos Santos</a>
             </div>
-            <nav class="hidden md:flex space-x-6 text-gray-600">
-                <a href="index.html" class="hover:text-blue-600 transition-colors">Home</a>
-                <a href="portfolio.html" class="hover:text-blue-600 transition-colors">Projects</a>
-                <a href="weather.html" class="hover:text-blue-600 transition-colors">Weather</a>
-                <a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a>
-                <a href="News.html" class="hover:text-blue-600 transition-colors">News</a>
-                <a href="ExchangeRate.html" class="hover:text-blue-600 transition-colors">Exchange Rate</a>
-                <a href="GenerateIAImages.html" class="hover:text-blue-600 transition-colors">Generate IA Imagens</a>
-                <a href="DevQAPage.html" class="hover:text-blue-600 transition-colors">Dev QA Page</a>
+            <nav class="hidden md:flex space-x-6 text-gray-600 dark:text-gray-300">
+                <a href="index.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+                <a href="portfolio.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
+                <a href="weather.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Weather</a>
+                <a href="contact.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+                <a href="News.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">News</a>
+                <a href="ExchangeRate.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Exchange Rate</a>
+                <a href="GenerateIAImages.html" class="text-blue-600 font-bold dark:text-blue-400">Generate IA Imagens</a>
+                <a href="DevQAPage.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Dev QA Page</a>
             </nav>
-            <a href="https://www.linkedin.com/in/diogorangels/" class="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors" target="_blank">Inquiries</a>
+            <div class="flex items-center space-x-4">
+                <button id="themeToggle" class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none">
+                    <svg id="themeIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </button>
+                <a href="https://www.linkedin.com/in/diogorangels/" class="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors" target="_blank">Inquiries</a>
+            </div>
         </div>
     </header>
 
     <main class="flex-grow flex items-center justify-center p-4">
-        <!-- Main Image Generator Section -->
-        <section class="wt-contact-innerpage-area pt-120 pb-120 dark-bg w-full max-w-2xl text-center rounded-2xl shadow-xl">
-            <div class="p-8">
-                <h2 class="text-3xl font-bold text-white mb-6">Gerador de Imagem</h2>
-                <p class="text-gray-300 mb-6">
-                    Enter your description and click "Generate Image" to create a custom image.
+        <section class="card-bg-dark dark:bg-white w-full max-w-2xl text-center rounded-2xl shadow-xl p-8">
+            <div>
+                <h2 class="text-3xl font-bold text-white dark:text-gray-800 mb-6">Gerador de Imagem IA</h2>
+                <p class="text-gray-300 dark:text-gray-600 mb-6">
+                    Digite sua descrição e clique em "Gerar Imagem" para criar uma imagem personalizada.
                 </p>
 
                 <div class="mb-4 w-full">
-                    <input type="text" id="imagePrompt" placeholder="Escreva o que você quer gerar..." class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="text" id="imagePrompt" placeholder="Escreva o que você quer gerar..." 
+                           class="w-full p-3 border border-gray-700 dark:border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900 dark:bg-white text-white dark:text-gray-800">
                 </div>
                 
                 <button id="generateBtn"
@@ -65,8 +71,7 @@
                     Gerar Imagem
                 </button>
 
-                <!-- Message Box for Alerts -->
-                <div id="messageBox" class="hidden mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-xl relative" role="alert">
+                <div id="messageBox" class="hidden mt-4 px-4 py-3 rounded-xl relative" role="alert">
                     <span id="messageText" class="block sm:inline"></span>
                 </div>
 
@@ -76,19 +81,21 @@
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        <span class="text-gray-300 font-medium">Gerando imagem...</span>
+                        <span class="text-gray-300 dark:text-gray-600 font-medium">Gerando imagem...</span>
                     </div>
                 </div>
 
                 <div id="imageContainer" class="mt-8 hidden">
-                    <img id="generatedImage" src="" alt="Imagem gerada" class="w-full h-auto rounded-xl shadow-md">
+                    <img id="generatedImage" src="" alt="Imagem gerada" class="w-full h-auto rounded-xl shadow-md border-2 border-gray-700 dark:border-gray-300">
+                    <a id="downloadBtn" href="#" download="imagem-ia.png" class="mt-4 inline-block px-4 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                        Baixar Imagem
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gray-800 dark:bg-gray-950 text-white py-8">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-4">Interessado em trabalhar junto?</h2>
             <div class="my-4 h-1 bg-gray-600 w-24 mx-auto rounded-full"></div>
