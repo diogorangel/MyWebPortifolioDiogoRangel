@@ -3,6 +3,8 @@
 ## Author : Diogo Rangel Dos Santos @_diogorangel
 * Link to access the project on the air (live) : https://diogorangel.github.io/MyWebPortifolioDiogoRangel/
 
+* Link to access the project on the air (live) : https://diogorangel.github.io/MyWebPortifolioDiogoRangel/diogorangelservices.html
+
 ## Follow my portfolio website
 ## 🚀 Technologies Used
 **HTML5 (Estrutura Semântica):** Construção da fundação estrutural e da árvore de acessibilidade da página, garantindo indexação otimizada para motores de busca e legibilidade nativa.
